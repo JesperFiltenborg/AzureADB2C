@@ -117,6 +117,13 @@ class Provider extends AbstractProvider
     {
         return $this->getOpenIdConfiguration()->token_endpoint;
     }
+
+     /**
+     * {@inheritdoc}
+     */
+    protected function getUserByToken($token)
+        // no implementation required because Azure AD B2C doesn't return access_token
+    }
     
     /**
      * Additional implementation to get user claims from id_token.
